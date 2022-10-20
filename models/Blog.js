@@ -1,3 +1,6 @@
+const { getCol } = require("../config/db");
+const col = getCol("blogs");
+
 class Blog {
   static validate(data) {
     const errors = {};
@@ -54,4 +57,16 @@ class Blog {
       data
     };
   }
+
+  static async getAll() {
+    return await col.find()?.toArray();
+  }
+
+  static async set(data) {
+    const result = await col.insertOne(data);
+
+    if (!result.acknowledged) throw new Error("Could not save to the database.");
+  }
 }
+
+module.exports = Blog;

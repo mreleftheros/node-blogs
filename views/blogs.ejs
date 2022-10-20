@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/header.ejs") %>
+      <main class="main">
+        <section class="blogs">
+          <h1 class="blogs-title">Blogs List</h1>
+          <% if (blogs.length> 0) { %>
+            <ul class="blogs-list">
+              <% blogs.map(blog=> { %>
+                <li data-id=<%=blog._id %>>
+                  <h2>
+                    <%= blog.title %>
+                  </h2>
+                </li>
+                <% }) %>
+            </ul>
+            <% } else { %>
+              <p class="blogs-msg">No blogs found.</p>
+              <a class="link" href="/blogs/new">Add Blog</a>
+              <% } %>
+        </section>
+      </main>
+      <%- include("./partials/footer.ejs") %>
+        <script></script>
+  </body>
+
+</html>

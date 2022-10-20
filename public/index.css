@@ -17,14 +17,15 @@ body {
   box-sizing: border-box;
   color: #111;
   max-width: 120rem;
-  margin: auto;
+  margin: 0 auto;
 }
 
 ul {
   list-style: none;
 }
 
-a, span {
+a,
+span {
   display: block;
 }
 
@@ -33,13 +34,28 @@ a {
   color: unset;
 }
 
+.link {
+  display: inline-block;
+  background-color: transparent;
+  border: solid aqua;
+  padding: 1rem;
+  font-size: 2rem;
+  border-radius: .25rem;
+  letter-spacing: .1rem;
+  transition: background .3s ease-in;
+}
+
+.link:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+
 .footer {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #111;
   color: #fff;
-  max-width: 100%;
 }
 
 .footer-text {
@@ -47,7 +63,6 @@ a {
 }
 
 .header {
-  padding-bottom: 1rem;
   border-bottom: 1px solid #111;
 }
 
@@ -76,6 +91,7 @@ a {
   margin: 1rem;
 }
 
+/* hero section */
 .hero {
   display: flex;
   flex-direction: column;
@@ -101,15 +117,68 @@ a {
   margin-top: 5rem;
 }
 
-.hero-cta-link {
-  background-color: aquamarine;
-  padding: 1rem;
-  font-size: 2.5rem;
-  border-radius: .25rem;
-  letter-spacing: .1rem;
-}
-
 .hero-cta-text {
   margin: 0 1.5rem;
   font-size: 2.5rem;
+}
+
+/* blogs section */
+.blogs {
+  height: 100%;
+  padding-top: 5rem;
+}
+
+.blogs-title {
+  font-size: 3.5rem;
+}
+
+.blogs-msg {
+  margin: 2.5rem 0 1rem;
+  font-size: 2rem;
+}
+
+.blogs-list {}
+
+/* add-blog section */
+.add-blog {
+  padding-top: 2.5rem;
+  height: 100%;
+}
+
+.add-blog-title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.add-blog-form {
+  padding-bottom: 2.5rem;
+}
+
+.add-blog-group {
+  margin: 1.5rem 0;
+}
+
+.add-blog-label {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: .5rem;
+}
+
+.add-blog-input {
+  outline: none;
+  border: none;
+  border-bottom: solid #111 1px;
+  padding: .5rem 1rem;
+  font-size: 1.75rem;
+}
+
+.add-blog-textarea {
+  outline: none;
+  padding: .5rem;
+  font-size: 1.75rem;
+  resize: none;
+  width: 100%;
+  min-height: 25rem;
 }
