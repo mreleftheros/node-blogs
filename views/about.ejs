@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h2>About Page</h2>
-  <a href="/">Home</a>
-  <a href="create">New Blog</a>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus esse officia fugiat deserunt repellendus ipsum est sint cum quibusdam eligendi!</p>
-</body>
+
+<%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/header.ejs") %>
+      <main class="main">
+        <section class="about">
+          <p class="about-text">This project uses server side rendering with Node js with ejs template views. </p>
+        </section>
+      </main>
+      <%- include("./partials/footer.ejs") %>
+        <script></script>
+  </body>
+
 </html>

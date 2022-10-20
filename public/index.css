@@ -93,12 +93,8 @@ a {
 
 /* hero section */
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5rem;
-  height: 25rem;
-  text-align: center;
+  margin: 5rem auto 0;
+  width: 50%;
 }
 
 .hero-title {
@@ -210,7 +206,7 @@ a {
 }
 
 .blog-body {
-  width: 60ch;
+  width: 120ch;
   line-height: 1.5;
 }
 
@@ -225,4 +221,15 @@ a {
   color: #fff;
   cursor: pointer;
   font-size: 2rem;
+}
+
+/* about section */
+.about {
+  padding-top: 5rem;
+  height: 100%;
+}
+
+.about-text {
+  width: 120ch;
+  line-height: 1.5;
 }
