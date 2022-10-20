@@ -1,5 +1,5 @@
 const { getCol, getId } = require("../config/db");
-const col = getCol("blogs");
+const col = getCol();
 
 class Blog {
   static validate(data) {
