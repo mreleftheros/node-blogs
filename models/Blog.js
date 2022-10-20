@@ -1,4 +1,4 @@
-const { getCol } = require("../config/db");
+const { getCol, getId } = require("../config/db");
 const col = getCol("blogs");
 
 class Blog {
@@ -66,6 +66,18 @@ class Blog {
     const result = await col.insertOne(data);
 
     if (!result.acknowledged) throw new Error("Could not save to the database.");
+    return;
+  }
+
+  static async getById(id) {
+    return await col.findOne({ _id: getId(id) });
+  }
+
+  static async deleteById(id) {
+    const result = await col.deleteOne({ _id: getId(id) });
+
+    if (!result.acknowledged) throw new Error("Could not delete from the database.");
+    return;
   }
 }
 

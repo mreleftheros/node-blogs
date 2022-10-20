@@ -1,4 +1,4 @@
-const { MongoClient } = require("mongodb");
+const { MongoClient, ObjectId } = require("mongodb");
 
 const dev = process.env.NODE_ENV === "dev";
 
@@ -11,5 +11,8 @@ module.exports = {
   },
   getCol(collection) {
     return _client.db(_dbName).collection(collection);
+  },
+  getId(id) {
+    return ObjectId(id);
   }
 }

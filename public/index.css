@@ -137,7 +137,15 @@ a {
   font-size: 2rem;
 }
 
-.blogs-list {}
+.blogs-list {
+  padding: 2.5rem 0;
+}
+
+.blogs-item {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: solid aqua;
+}
 
 /* add-blog section */
 .add-blog {
@@ -181,4 +189,40 @@ a {
   resize: none;
   width: 100%;
   min-height: 25rem;
+}
+
+/* blog section */
+.blog {
+  position: relative;
+  height: 100%;
+}
+
+.blog-title {
+  font-size: 3.5rem;
+  padding-top: 2.5rem;
+  letter-spacing: .1rem;
+}
+
+.blog-snippet {
+  margin: 1rem 0 2.5rem;
+  font-weight: 100;
+  width: 30ch;
+}
+
+.blog-body {
+  width: 60ch;
+  line-height: 1.5;
+}
+
+.blog-trash {
+  position: absolute;
+  top: 5%;
+  left: 90%;
+  border: none;
+  padding: .5rem 1.5rem;
+  border-radius: .25rem;
+  background-color: firebrick;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
 }

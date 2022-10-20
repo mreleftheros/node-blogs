@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+  <body>
+    <%- include("./partials/header.ejs") %>
+      <main class="main">
+        <section class="blog">
+          <h1 class="blog-title">
+            <%= blog.title %>
+          </h1>
+          <h2 class="blog-snippet">
+            <%= blog.snippet %>
+          </h2>
+          <p class="blog-body">
+            <%= blog.body %>
+          </p>
+          <a href="/blogs/<%= blog._id %>/delete" class="blog-trash">🗑</a>
+        </section>
+      </main>
+      <%- include("./partials/footer.ejs") %>
+        <script></script>
+  </body>
+
+</html>

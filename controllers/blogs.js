@@ -27,3 +27,32 @@ exports.new_post = async (req, res) => {
     return res.status(500).render("404");
   }
 };
+
+exports.idParam_get = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const blog = await Blog.getById(id);
+    if (!blog) {
+      return res.status(404).render("404");
+    }
+
+    return res.render("blog", { title: "hello", blog });
+  } catch (err) {
+    console.log(err.message);
+    return res.status(500).render("404");
+  }
+};
+
+exports.idParam_delete_get = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    await Blog.deleteById(id);
+
+    return res.redirect("/blogs");
+  } catch (err) {
+    console.log(err.message);
+    return res.status(500).render("404");
+  }
+}
